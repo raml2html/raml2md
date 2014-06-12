@@ -12,7 +12,7 @@
   "dependencies": {
     "commander": "^2.2.0",
     "handlebars": "~2.0.0-alpha.1",
-    "raml-parser": "~0.8.5"
+    "raml2obj": "*"
   },
   "homepage": "https://github.com/kevinrenskers/raml2md",
   "keywords": [
