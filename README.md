@@ -1,6 +1,7 @@
 # RAML to Markdown
 
-A simple RAML to Markdown documentation generator, written for Node.js.
+A simple RAML to Markdown documentation generator, written for Node.js. 
+Check [raml2html](https://github.com/kevinrenskers/raml2html) for a RAML to HTML generator.
 
 
 ## Install
