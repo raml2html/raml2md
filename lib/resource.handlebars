@@ -1,62 +1,8 @@
 ### {{parentUrl}}{{relativeUri}}
 {{#methods}}
 {{method}}: {{description}}
-{{#if body}}
-{{#each body}}
-{{#if schema}}
-> Body Schema:
-
-```json
-{{{this.schema}}}
-
-```
-
-{{/if}}
-{{#if example}}
-{{#each example}}
->  Body Example:
-
-```json
-{{{this.example}}}
-```
-
-{{/each}}
-{{/if}}
-{{/each}}
-{{/if}}
-
-{{#if responses}}
-{{#each responses}}
-{{#if this.body}}
-{{#each this.body}}
-{{#if this.schema}}
-> Response Schema:
-
-```json
-
-{{{this.schema}}}
-
-```
-
-{{/if}}
-{{#if example}}
->  Response Example:
-
-```json
-
-{{{this.example}}}
-
-```
-
-{{/if}}
-{{/each}}
-{{/if}}
-{{/each}}
-{{/if}}
-
 {{/methods}}
 
 {{#resources}}
 {{> resource}}
-
 {{/resources}}
