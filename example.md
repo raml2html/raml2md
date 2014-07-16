@@ -25,7 +25,6 @@ More content here. Including **bold** text!
 ---
 
 ## ACCOUNTS
-
 This is the top level description for /account.
 
 * One
@@ -63,7 +62,6 @@ Paragraph two
 * **delete**: Deletes the session, logging out the user
 
 ## Forecasts
-
 The very top resource - displays OK
 
 ### /forecasts
@@ -73,7 +71,6 @@ The very top resource - displays OK
 * **get**: Provides an overview of the available data - display OK
 
 ## /conversations
-
 This is the top level description for /conversations.
 
 ### /conversations
