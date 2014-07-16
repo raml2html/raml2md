@@ -75,8 +75,8 @@ This is the top level description for /conversations.
 
 ### /conversations
 
-* **get**: Get a list of conversation for the current user
-* **post**: Create a new conversions. The currently logged in user doesn't need to be supplied in the members list, it's implied.
+* **get** *(secured)*: Get a list of conversation for the current user
+* **post** *(secured)*: Create a new conversions. The currently logged in user doesn't need to be supplied in the members list, it's implied.
 
 ### /conversations/{convId}
 
