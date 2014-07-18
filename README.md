@@ -47,7 +47,8 @@ and everyone who took the time to report issues and give feedback.
 
 
 ## To do
-This project is in an early stage. It's probably not ready for production just yet.
+This project is in an early stage. The generated Markdown is missing a lot of details but should be very usable
+for README's, for example.
 
 
 ## License
