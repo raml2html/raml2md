@@ -1,3 +1,6 @@
+0.4.0 - September 10, 2014
+- Greatly simplified the code by calling raml2html's methods
+
 0.3.0 - July 16, 2014
 - Render securedBy info
 - Clean extra newlines in output
