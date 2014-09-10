@@ -1,3 +1,6 @@
+0.4.1 - September 10, 2014
+- Reinstated raml2md-as-a-library functionality
+
 0.4.0 - September 10, 2014
 - Greatly simplified the code by calling raml2html's methods
 
