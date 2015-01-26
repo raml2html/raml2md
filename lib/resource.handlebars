@@ -1,7 +1,10 @@
+{{#emptyResourceCheck}}
 ### {{parentUrl}}{{relativeUri}}
+{{#if parentUrl}}{{{description}}}{{/if}}
 
 {{#methods}}* **{{method}}**{{#securedBy}} *(secured)*{{/securedBy}}: {{{description}}}
 {{/methods}}
+{{/emptyResourceCheck}}
 
 {{#resources}}
 {{> resource}}

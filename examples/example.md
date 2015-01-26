@@ -10,14 +10,13 @@ var raml2html = require('raml2html');
 
 // Using the default templates:
 // source can either be a filename, file contents (string) or parsed RAML object
-var config = raml2html.getDefaultConfig()
-raml2html.render(source, config, onSuccess, onError);
+raml2html.parse(source, onSuccess, onError);
 
 // Using your own templates:
 // - config should be an object with at least an `template` property
 // - config can also include `helpers` and `partials`
 // - the config object will be accessible from your handlebars templates
-raml2html.render(source, config, onSuccess, onError);
+raml2html.parseWithConfig(source, config, onSuccess, onError);
 ```
 
 ### Chapter two
@@ -27,7 +26,6 @@ More content here. Including **bold** text!
 
 ## ACCOUNTS
 This is the top level description for /account.
-
 * One
 * Two
 * Three
@@ -65,11 +63,13 @@ Paragraph two
 ## Forecasts
 The very top resource - displays OK
 
-### /forecasts
-
 ### /forecasts/{geoposition}
+Overview endpoint to assemble and access forecast data in various timely resolutions - THIS IS NOT DISPLAYED ANYWHERE WITH RAML2HTML :/
 
 * **get**: Provides an overview of the available data - display OK
+
+### /forecasts/test
+No methods here, but it does have a description
 
 ## /conversations
 This is the top level description for /conversations.

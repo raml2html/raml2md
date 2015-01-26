@@ -1,3 +1,9 @@
+1.0.0 - January 26, 2015
+- **Finalized API**, in line with raml2html
+- Added resource-level descriptions
+- Hiding empty resources
+- No longer depends on raml2html, using raml2obj directly
+
 0.4.1 - September 10, 2014
 - Reinstated raml2md-as-a-library functionality
 

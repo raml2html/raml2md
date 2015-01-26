@@ -13,14 +13,13 @@ documentation:
 
       // Using the default templates:
       // source can either be a filename, file contents (string) or parsed RAML object
-      var config = raml2html.getDefaultConfig()
-      raml2html.render(source, config, onSuccess, onError);
+      raml2html.parse(source, onSuccess, onError);
 
       // Using your own templates:
       // - config should be an object with at least an `template` property
       // - config can also include `helpers` and `partials`
       // - the config object will be accessible from your handlebars templates
-      raml2html.render(source, config, onSuccess, onError);
+      raml2html.parseWithConfig(source, config, onSuccess, onError);
       ```
   - title: Chapter two
     content: More content here. Including **bold** text!
@@ -40,16 +39,17 @@ traits:
         page_size:
           description: The number of items per page
           type: number
+          default: 20
         page:
           description: The page to return
           type: number
+          default: 0
 
 /account:
   displayName: ACCOUNTS
 
   description: |
     This is the top level description for /account.
-
     * One
     * Two
     * Three
@@ -82,8 +82,10 @@ traits:
           example: Naruto Uzumaki
         gender:
           enum: ["male", "female"]
+          required: true
         number:
           type: integer
+          default: 42
   /{id}:
     uriParameters:
       id:
@@ -169,6 +171,8 @@ traits:
         type: string
     get:
       description: Provides an overview of the available data - display OK
+  /test:
+    description: No methods here, but it does have a description
 
 
 /conversations:
