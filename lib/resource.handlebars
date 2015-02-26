@@ -2,7 +2,25 @@
 ### {{parentUrl}}{{relativeUri}}
 {{#if parentUrl}}{{{description}}}{{/if}}
 
-{{#methods}}* **{{method}}**{{#securedBy}} *(secured)*{{/securedBy}}: {{{description}}}
+{{#methods}}* **{{method}}**{{#securedBy}} *(secured)*{{/securedBy}}: {{{addSpacesBeforeLine description}}}
+{{#if queryParameters}}  * **Query parameters**:
+{{#each queryParameters}}    * `{{@key}}`:{{addSpacesBeforeLine description 6}}
+      * name: {{#if displayName}}{{displayName}}{{else}}{{@key}}{{/if}}
+      * type: {{type}}
+      * default: {{#if default}}{{default}}{{else}}none{{/if}}{{#if required}}
+      * *required*{{/if}}{{#if example}}
+      * example: {{example}}{{/if}}
+{{/each}}{{/if}}{{#if responses}}  * **Responses**:
+{{#each responses}}    * *{{@key}}*: {{description}}
+{{#if body}}        * body:{{#each body}}
+          * {{@key}}:
+            * example:
+              ```{{extractLanguageFromMime @key}}
+{{{addSpacesBeforeLine example 14}}}
+              ```
+{{/each}}{{/if}}
+{{/each}}
+{{/if}}
 {{/methods}}
 {{/emptyResourceCheck}}
 
