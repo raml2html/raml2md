@@ -3,20 +3,20 @@
 {{#if parentUrl}}{{{description}}}{{/if}}
 
 {{#methods}}* **{{method}}**{{#securedBy}} *(secured)*{{/securedBy}}: {{{addSpacesBeforeLine description}}}
-{{#if queryParameters}}  * **Query parameters**:
-{{#each queryParameters}}    * `{{@key}}`:{{addSpacesBeforeLine description 6}}
-      * name: {{#if displayName}}{{displayName}}{{else}}{{@key}}{{/if}}
-      * type: {{type}}
-      * default: {{#if default}}{{default}}{{else}}none{{/if}}{{#if required}}
-      * *required*{{/if}}{{#if example}}
-      * example: {{example}}{{/if}}
-{{/each}}{{/if}}{{#if responses}}  * **Responses**:
-{{#each responses}}    * *{{@key}}*: {{description}}
-{{#if body}}        * body:{{#each body}}
-          * {{@key}}:
-            * example:
+{{#if queryParameters}}{{indent 1}}* **Query parameters**:
+{{#each queryParameters}}{{indent 2}}* `{{@key}}`:{{addSpacesBeforeLine description 8}}
+{{indent 3}}* name: {{#if displayName}}{{displayName}}{{else}}{{@key}}{{/if}}
+{{indent 3}}* type: {{type}}
+{{indent 3}}* default: {{#if default}}{{default}}{{else}}none{{/if}}{{#if required}}
+{{indent 3}}* *required*{{/if}}{{#if example}}
+{{indent 3}}* example: {{example}}{{/if}}
+{{/each}}{{/if}}{{#if responses}}{{indent 1}}* **Responses**:
+{{#each responses}}{{indent 2}}* *{{@key}}*: {{description}}
+{{#if body}}{{indent 3}}* body:{{#each body}}
+{{indent 4}}* {{@key}}:
+{{indent 5}}* example:
 
-{{{addSpacesBeforeLine example 20}}}
+{{{addSpacesBeforeLine example 28}}}
 
 {{/each}}{{/if}}
 {{/each}}
