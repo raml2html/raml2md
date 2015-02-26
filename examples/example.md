@@ -76,10 +76,9 @@ This is the top level description for /account.
         * body:
           * text/xml:
             * example:
-              ```xml
-              <test>This is a test</test>
-              
-              ```
+
+                    <test>This is a test</test>
+                    
 
     * *400*: Login was incorrect, please try again
 
