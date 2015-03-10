@@ -2,9 +2,9 @@
 ### {{parentUrl}}{{relativeUri}}
 {{#if parentUrl}}{{{description}}}{{/if}}
 
-{{#methods}}* **{{method}}**{{#securedBy}} *(secured)*{{/securedBy}}: {{{addSpacesBeforeLine description}}}
+{{#methods}}* **{{method}}**{{#securedBy}} *(secured)*{{/securedBy}}: {{{addIndentationBeforeLine description}}}
 {{#if queryParameters}}{{indent 1}}* **Query parameters**:
-{{#each queryParameters}}{{indent 2}}* `{{@key}}`:{{addSpacesBeforeLine description 8}}
+{{#each queryParameters}}{{indent 2}}* `{{@key}}`:{{addIndentationBeforeLine description 2}}
 {{indent 3}}* name: {{#if displayName}}{{displayName}}{{else}}{{@key}}{{/if}}
 {{indent 3}}* type: {{type}}
 {{indent 3}}* default: {{#if default}}{{default}}{{else}}none{{/if}}{{#if required}}
@@ -16,7 +16,7 @@
 {{indent 4}}* {{@key}}:
 {{indent 5}}* example:
 
-{{{addSpacesBeforeLine example 28 true}}}{{/each}}{{/if}}
+{{{addIndentationBeforeLine example 7 true}}}{{/each}}{{/if}}
 {{/each}}
 {{/if}}
 {{/methods}}
