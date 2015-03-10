@@ -2,7 +2,23 @@
 ### {{parentUrl}}{{relativeUri}}
 {{#if parentUrl}}{{{description}}}{{/if}}
 
-{{#methods}}* **{{method}}**{{#securedBy}} *(secured)*{{/securedBy}}: {{{description}}}
+{{#methods}}* **{{method}}**{{#securedBy}} *(secured)*{{/securedBy}}: {{{addIndentationBeforeLine description}}}
+{{#if queryParameters}}{{indent 1}}* **Query parameters**:
+{{#each queryParameters}}{{indent 2}}* `{{@key}}`:{{addIndentationBeforeLine description 2}}
+{{indent 3}}* name: {{#if displayName}}{{displayName}}{{else}}{{@key}}{{/if}}
+{{indent 3}}* type: {{type}}
+{{indent 3}}* default: {{#if default}}{{default}}{{else}}none{{/if}}{{#if required}}
+{{indent 3}}* *required*{{/if}}{{#if example}}
+{{indent 3}}* example: {{example}}{{/if}}
+{{/each}}{{/if}}{{#if responses}}{{indent 1}}* **Responses**:
+{{#each responses}}{{indent 2}}* *{{@key}}*: {{description}}
+{{#if body}}{{indent 3}}* body:{{#each body}}
+{{indent 4}}* {{@key}}:
+{{indent 5}}* example:
+
+{{{addIndentationBeforeLine example 7 true}}}{{/each}}{{/if}}
+{{/each}}
+{{/if}}
 {{/methods}}
 {{/emptyResourceCheck}}
 
