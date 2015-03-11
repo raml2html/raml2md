@@ -1,0 +1,12 @@
+{% if (resource.methods or (resource.description and resource.parentUrl)) %}
+### {{ resource.parentUrl }}{{ resource.relativeUri }}
+{% if resource.parentUrl %}{{ resource.description }}{% endif %}
+
+{% for method in resource.methods %}
+* **{{ method.method}}**{% if method.securedBy %} *(secured)*{% endif %}: {{ method.description }}
+{% endfor %}
+{% endif %}
+
+{% for resource in resource.resources %}
+{% include "lib/resource.nunjucks" %}
+{% endfor %}

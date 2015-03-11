@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "commander": "2.2.x",
-    "handlebars": "1.3.x",
+    "nunjucks": "^1.2.0",
     "raml2obj": "1.0.x"
   },
   "homepage": "https://github.com/kevinrenskers/raml2md",
