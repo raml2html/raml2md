@@ -1,7 +1,7 @@
 {
   "name": "raml2md",
   "description": "RAML to Markdown documentation generator",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": {
     "name": "Kevin Renskers",
     "email": "info@mixedcase.nl"
@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "commander": "2.2.x",
-    "nunjucks": "^1.2.0",
+    "nunjucks": "1.2.x",
     "raml2obj": "1.0.x"
   },
   "homepage": "https://github.com/kevinrenskers/raml2md",
