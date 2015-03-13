@@ -1,6 +1,6 @@
 # RAML to Markdown
 
-A simple RAML to Markdown documentation generator, written for Node.js. 
+A simple RAML to Markdown documentation generator, written for Node.js.
 Check [raml2html](https://github.com/kevinrenskers/raml2html) for a RAML to HTML generator.
 
 
@@ -11,27 +11,36 @@ npm i -g raml2md
 
 
 ## Usage
-As a command line script:
+
+### As a command line script
 
 ```
 raml2md example.raml > example.md
 raml2md -i example.raml -o example.md
 ```
 
-As a library:
+### As a library
 
+#### Using the default templates
+```
+var raml2md = require('raml2md');
+var config = raml2md.getDefaultConfig();
+
+// source can either be a filename, file contents (string) or parsed RAML object.
+raml2md.render(source, config, onSuccess, onError);
+```
+
+#### Using your own Nunjucks templates
 ```
 var raml2md = require('raml2md');
 
-// Using the default templates:
-// source can either be a filename, file contents (string) or parsed RAML object
-var config = raml2md.getDefaultConfig(); 
-raml2md.render(source, config, onSuccess, onError);
-
-// Using your own templates:
-// config should be an object with at least an `template` property
+// source can either be a filename, file contents (string) or parsed RAML object.
+// config should be an object with at least a `template` property which is a url (relative from the working directory) to your main template,
+// you can also include a processOutput function
 raml2md.render(source, config, onSuccess, onError);
 ```
+
+If you want to use a different template language, you're better off directly using [raml2obj](https://github.com/kevinrenskers/raml2obj).
 
 
 ## Contribute
