@@ -17,6 +17,7 @@ npm i -g raml2md
 ```
 raml2md example.raml > example.md
 raml2md -i example.raml -o example.md
+raml2md -t custom-template.nunjucks -i example.raml -o example.md
 ```
 
 ### As a library
