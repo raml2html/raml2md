@@ -27,7 +27,12 @@ var raml2md = require('raml2md');
 var config = raml2md.getDefaultConfig();
 
 // source can either be a filename, file contents (string) or parsed RAML object.
-raml2md.render(source, config, onSuccess, onError);
+// Returns a promise.
+raml2md.render(source, config).then(function(result) {
+    // Save the result to a file or do something else with the result
+}, function(error) {
+    // Output error
+});
 ```
 
 #### Using your own Nunjucks templates
@@ -36,8 +41,13 @@ var raml2md = require('raml2md');
 
 // source can either be a filename, file contents (string) or parsed RAML object.
 // config should be an object with at least a `template` property which is a url (relative from the working directory) to your main template,
-// you can also include a processOutput function
-raml2md.render(source, config, onSuccess, onError);
+// you can also include a processOutput function.
+// Returns a promise.
+raml2md.render(source, config).then(function(result) {
+    // Save the result to a file or do something else with the result
+}, function(error) {
+    // Output error
+});
 ```
 
 If you want to use a different template language, you're better off directly using [raml2obj](https://github.com/kevinrenskers/raml2obj).

@@ -1,5 +1,9 @@
+2.0.0 - March 13, 2015
+- Using a promise based API, please see README for updated usage example
+- Using Nunjucks instead of Handlebars
+
 1.0.0 - January 26, 2015
-- **Finalized API**, in line with raml2html
+- Finalized API, in line with raml2html
 - Added resource-level descriptions
 - Hiding empty resources
 - No longer depends on raml2html, using raml2obj directly
