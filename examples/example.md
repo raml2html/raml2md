@@ -40,17 +40,21 @@ Paragraph two
 ### /account/find
 
 * **get**: find an account
+
 ### /account/{id}
 
 * **get**: 
 * **put**: Update the account
 * **delete**: Delete the account
+
 ### /account/login
 
 * **post**: Login with email and password
+
 ### /account/forgot
 
 * **post**: Sends an email to the user with a link to set a new password
+
 ### /account/session
 
 * **get**: Gets the sessions
@@ -61,7 +65,9 @@ The very top resource - displays OK
 
 ### /forecasts/{geoposition}
 Overview endpoint to assemble and access forecast data in various timely resolutions - THIS IS NOT DISPLAYED ANYWHERE WITH RAML2HTML :/
+
 * **get**: Provides an overview of the available data - display OK
+
 ### /forecasts/test
 No methods here, but it does have a description
 
@@ -72,14 +78,17 @@ This is the top level description for /conversations.
 
 * **get** *(secured)*: Get a list of conversation for the current user
 * **post** *(secured)*: Create a new conversions. The currently logged in user doesn't need to be supplied in the members list, it's implied.
+
 ### /conversations/{convId}
 
 * **get**: Get a single conversation including its messages
 * **put**: Update a conversation (change members)
+
 ### /conversations/{convId}/messages
 
 * **get**: Get the messages for the conversation
 * **post**: Add a new message to a conversation
+
 ### /conversations/{convId}/messages/{messageId}
 
 * **put**: Update the message
@@ -91,6 +100,7 @@ This is the top level description for /conversations.
 
 * **get**: Get a list of all users
 * **post**: Creates a new user
+
 ### /users/{userId}
 
 * **get**: Get the details of a user including a list of groups he belongs to
@@ -103,14 +113,17 @@ This is the top level description for /conversations.
 
 * **get**: Get a list of all the groups
 * **post**: Create a new group
+
 ### /groups/{groupId}
 
 * **get**: Get the details of a group, including the member list
 * **put**: Update the group, **optionally** supplying the new list of members (overwrites current list)
 * **delete**: Removes the group
+
 ### /groups/{groupId}/users
 
 * **post**: Adds a user to a group
+
 ### /groups/{groupId}/users/{userId}
 
 * **delete**: Removes a user from a group
