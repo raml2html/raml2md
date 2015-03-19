@@ -108,9 +108,6 @@ Overview endpoint to assemble and access forecast data in various timely resolut
 
 No methods here, but it does have a description
 
-* Methods
-    
-
 ## /conversations
 This is the top level description for /conversations.
 

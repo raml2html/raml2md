@@ -11,7 +11,7 @@
 {% endfor %}
 {% endif -%}
 
-{%- if resource.allUriParameters %}
+{%- if resource.methods %}
 * Methods
     {% for method in resource.methods %}
     * **{{ method.method}}**{% if method.securedBy %} *(secured)*{% endif %}: {{ method.description }}
