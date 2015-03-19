@@ -1,6 +1,8 @@
 # RAML to Markdown
 
-A simple RAML to Markdown documentation generator, written for Node.js. 
+[![NPM version](http://img.shields.io/npm/v/raml2md.svg)](https://www.npmjs.org/package/raml2md)
+
+A simple RAML to Markdown documentation generator, written for Node.js.
 Check [raml2html](https://github.com/kevinrenskers/raml2html) for a RAML to HTML generator.
 
 
@@ -11,27 +13,47 @@ npm i -g raml2md
 
 
 ## Usage
-As a command line script:
+
+### As a command line script
 
 ```
 raml2md example.raml > example.md
 raml2md -i example.raml -o example.md
+raml2md -t custom-template.nunjucks -i example.raml -o example.md
 ```
 
-As a library:
+### As a library
 
+#### Using the default templates
+```
+var raml2md = require('raml2md');
+var config = raml2md.getDefaultConfig();
+
+// source can either be a filename, file contents (string) or parsed RAML object.
+// Returns a promise.
+raml2md.render(source, config).then(function(result) {
+    // Save the result to a file or do something else with the result
+}, function(error) {
+    // Output error
+});
+```
+
+#### Using your own Nunjucks templates
 ```
 var raml2md = require('raml2md');
 
-// Using the default templates:
-// source can either be a filename, file contents (string) or parsed RAML object
-var config = raml2md.getDefaultConfig(); 
-raml2md.render(source, config, onSuccess, onError);
-
-// Using your own templates:
-// config should be an object with at least an `template` property
-raml2md.render(source, config, onSuccess, onError);
+// source can either be a filename, file contents (string) or parsed RAML object.
+// config should be an object with at least a `template` property which is a url (relative from the working directory) to your main template,
+// you can also include a processOutput function.
+// Returns a promise.
+raml2md.render(source, config).then(function(result) {
+    // Save the result to a file or do something else with the result
+}, function(error) {
+    // Output error
+});
 ```
+
+If you want to use a different template language, you're better off directly using [raml2obj](https://github.com/kevinrenskers/raml2obj).
 
 
 ## Contribute
