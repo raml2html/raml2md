@@ -1,0 +1,19 @@
+* {% if param.displayName %}{{ param.displayName }}{% else %}{{ name }}{% endif %}
+
+{%- if param.required %} - required{%- endif -%}
+
+{%- if param.enum %} - one of {{ param.enum }}{%- else %} - {{ param.type }}{%- endif -%}
+
+{%- if param.default %} - default: {{ param.default }}{%- endif -%}
+
+{%- if param.repeat %} - repeat: {{ param.repeat }}{%- endif -%}
+
+{%- if param.type == 'string' -%}
+    {%- if param.minLength %} - minLength: {{ param.minLength }}{%- endif -%}
+    {%- if param.maxLength %} - maxLength: {{ param.maxLength }}{%- endif -%}
+{%- else -%}
+    {%- if param.minimum %} - minimum: {{ param.minimum }}{%- endif -%}
+    {%- if param.maximum %} - maximum: {{ param.maximum }}{%- endif -%}
+{%- endif -%}
+
+{%- if param.pattern %} - pattern: {{ param.pattern }}{%- endif -%}
