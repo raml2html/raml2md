@@ -1,30 +1,11 @@
 {% if (resource.methods or (resource.description and resource.parentUrl)) %}
 ### {{ resource.parentUrl }}{{ resource.relativeUri }}
-{% if resource.parentUrl %}
-{{ resource.description }}
-{% endif -%}
-
-{%- if resource.allUriParameters.length %}
-* URI Parameters
-{% for param in resource.allUriParameters %}
-    {% include "item.nunjucks" %}
-{% endfor %}
-{% endif -%}
-
-{%- if resource.methods %}
-* Methods
-    {% for method in resource.methods %}
-    * **{{ method.method}}**{% if method.securedBy %} *(secured)*{% endif %}: {{ method.description }}
-    {% if method.queryParameters %}
-        * Query Parameters
-        {% for name, param in method.queryParameters %}
-            {% include "item.nunjucks" %}
-        {% endfor %}
-    {%- endif -%}
-    {%- endfor -%}
-    {%- endif -%}
-{% endif -%}
-
-{%- for resource in resource.resources -%}
-{%- include "resource.nunjucks" -%}
+{% if resource.parentUrl %}{{ resource.description }}{% endif %}
+{% for method in resource.methods %}
+* **{{ method.method}}**{% if method.securedBy %} *(secured)*{% endif %}: {{ method.description }}
 {%- endfor -%}
+{% endif %}
+
+{% for resource in resource.resources %}
+{% include "resource.nunjucks" %}
+{% endfor %}
