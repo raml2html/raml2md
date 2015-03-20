@@ -1,4 +1,8 @@
-2.0.0 - March 13, 2015
+2.0.1 - March 20, 2015
+- Fixed help text for the -t option
+- Added templatesPath property to the config object
+
+2.0.0 - March 20, 2015
 - Using a promise based API, please see README for updated usage example
 - Using Nunjucks instead of Handlebars
 
