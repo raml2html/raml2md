@@ -60,8 +60,8 @@ If you want to use a different template language, you're better off directly usi
 raml2md is an open source project and your contribution is very much appreciated.
 
 1. Check for open issues or open a fresh issue to start a discussion around a feature idea or a bug.
-2. Fork the repository on Github and make your changes on the develop branch (or branch off of it).
-   Please retain the code style that is used in the project.
+2. Fork the repository on Github and make your changes on the **develop** branch (or branch off of it).  
+   Please retain the [code style](https://github.com/airbnb/javascript) that is used in the project and `npm run lint` before committing.
 3. Add an example of the new feature to example.raml (if applicable)
 4. Send a pull request (with the develop branch as the target).
 

@@ -15,6 +15,10 @@
     "raml2obj": "2.0.x",
     "q": "1.2.x"
   },
+  "devDependencies": {
+    "jscs": "1.12.x",
+    "jshint": "2.6.x"
+  },
   "homepage": "https://github.com/kevinrenskers/raml2md",
   "keywords": [
     "RAML"
@@ -26,6 +30,9 @@
     "url": "git://github.com/kevinrenskers/raml2md.git"
   },
   "preferGlobal": "true",
+  "scripts": {
+    "lint": "jscs lib/raml2md.js && jshint lib/raml2md.js"
+  },
   "bin": {
     "raml2md": "lib/raml2md.js"
   }
