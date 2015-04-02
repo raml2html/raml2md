@@ -15,7 +15,6 @@ npm i -g raml2md
 ## Usage
 
 ### As a command line script
-
 ```
 raml2md example.raml > example.md
 raml2md -i example.raml -o example.md
@@ -32,9 +31,9 @@ var config = raml2md.getDefaultConfig();
 // source can either be a filename, file contents (string) or parsed RAML object.
 // Returns a promise.
 raml2md.render(source, config).then(function(result) {
-    // Save the result to a file or do something else with the result
+  // Save the result to a file or do something else with the result
 }, function(error) {
-    // Output error
+  // Output error
 });
 ```
 
