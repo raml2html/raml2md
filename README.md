@@ -46,9 +46,9 @@ var raml2md = require('raml2md');
 // you can also include a processOutput function.
 // Returns a promise.
 raml2md.render(source, config).then(function(result) {
-    // Save the result to a file or do something else with the result
+  // Save the result to a file or do something else with the result
 }, function(error) {
-    // Output error
+  // Output error
 });
 ```
 
