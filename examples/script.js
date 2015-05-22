@@ -4,7 +4,7 @@
  Example of using raml2md as a script.
  */
 
-var raml2md = require('../lib/raml2md');
+var raml2md = require('..');
 
 // raml2md.render() needs a config object with at least a `template` property (a url to a Nunjucks template).
 // Instead of creating this config object ourselves, we can just ask for raml2md.getDefaultConfig():

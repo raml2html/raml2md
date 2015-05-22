@@ -1,7 +1,7 @@
 {
   "name": "raml2md",
   "description": "RAML to Markdown documentation generator",
-  "version": "2.0.1",
+  "version": "2.1.0",
   "author": {
     "name": "Kevin Renskers",
     "email": "info@mixedcase.nl"
@@ -12,7 +12,7 @@
   "dependencies": {
     "commander": "2.2.x",
     "nunjucks": "1.2.x",
-    "raml2obj": "2.0.x",
+    "raml2obj": "2.1.x",
     "q": "1.2.x"
   },
   "devDependencies": {
@@ -24,7 +24,7 @@
     "RAML"
   ],
   "license": "MIT",
-  "main": "lib/raml2md.js",
+  "main": "index.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/kevinrenskers/raml2md.git"
@@ -34,6 +34,6 @@
     "lint": "jscs lib/raml2md.js && jshint lib/raml2md.js"
   },
   "bin": {
-    "raml2md": "lib/raml2md.js"
+    "raml2md": "./bin/raml2md"
   }
 }

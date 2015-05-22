@@ -1,3 +1,6 @@
+2.1.0 - May 22, 2015
+- Split the library from the command line program
+
 2.0.1 - March 20, 2015
 - Fixed help text for the -t option
 - Added templatesPath property to the config object
