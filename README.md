@@ -1,6 +1,7 @@
 # RAML to Markdown
 
 [![NPM version](http://img.shields.io/npm/v/raml2md.svg)](https://www.npmjs.org/package/raml2md)
+[![js-standard-style](https://img.shields.io/badge/code%20style-airbnb-blue.svg?style=flat)](https://github.com/airbnb/javascript)
 
 A simple RAML to Markdown documentation generator, written for Node.js.
 Check [raml2html](https://github.com/kevinrenskers/raml2html) for a RAML to HTML generator.
