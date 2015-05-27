@@ -5,12 +5,13 @@
  */
 
 var raml2md = require('..');
+var path = require('path');
 
 // raml2md.render() needs a config object with at least a `template` property (a url to a Nunjucks template).
 // Instead of creating this config object ourselves, we can just ask for raml2md.getDefaultConfig():
 var config = raml2md.getDefaultConfig();
 
-raml2md.render(__dirname + '/example.raml', config).then(function(result) {
+raml2md.render(path.join(__dirname, 'example.raml'), config).then(function(result) {
   console.log(result);
 }, function(error) {
   console.log('error! ', error);
