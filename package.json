@@ -16,8 +16,7 @@
     "q": "1.2.x"
   },
   "devDependencies": {
-    "jscs": "1.12.x",
-    "jshint": "2.6.x"
+    "eslint": "0.21.x"
   },
   "homepage": "https://github.com/kevinrenskers/raml2md",
   "keywords": [
@@ -31,7 +30,7 @@
   },
   "preferGlobal": "true",
   "scripts": {
-    "lint": "jscs lib/raml2md.js && jshint lib/raml2md.js"
+    "lint": "eslint ./"
   },
   "bin": {
     "raml2md": "./bin/raml2md"
