@@ -1,3 +1,6 @@
+2.2.0 - July 10, 2015
+- Added a templatesPath option to the command line interface (#8)
+
 2.1.0 - May 22, 2015
 - Split the library from the command line program
 

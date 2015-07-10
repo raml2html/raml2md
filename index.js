@@ -8,6 +8,11 @@ var pjson = require('./package.json');
 var nunjucks = require('nunjucks');
 var Q = require('q');
 
+exports = module.exports = {
+  getDefaultConfig: getDefaultConfig,
+  render: render
+};
+
 /*
  The config object can contain the following keys and values:
  template: url to the main template (required)
@@ -34,10 +39,9 @@ function render(source, config) {
   });
 }
 
-function getDefaultConfig(mainTemplate) {
-  var templatesPath = null;
-
+function getDefaultConfig(mainTemplate, templatesPath) {
   if (!mainTemplate) {
+    // When using the default templates, use raml2md's lib folder as the templates path
     mainTemplate = 'template.nunjucks';
     templatesPath = path.join(__dirname, 'lib');
   }
@@ -51,5 +55,7 @@ function getDefaultConfig(mainTemplate) {
   };
 }
 
-module.exports.getDefaultConfig = getDefaultConfig;
-module.exports.render = render;
+if (require.main === module) {
+  console.log('This script is meant to be used as a library. You probably want to run bin/raml2md if you\'re looking for a CLI.');
+  process.exit(1);
+}

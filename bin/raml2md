@@ -11,8 +11,9 @@ program
   .usage('[options] [RAML input file]')
   .version(pjson.version)
   .option('-i, --input [input]', 'RAML input file')
+  .option('-t, --template [template]', 'Path to custom Nunjucks template')
+  .option('-p, --templatesPath [templatesPath]', 'Path of custom template(s)')
   .option('-o, --output [output]', 'Markdown output file')
-  .option('-t, --template [template]', 'Path to custom template.nunjucks file')
   .parse(process.argv);
 
 var input = program.input;
@@ -28,7 +29,7 @@ if (!input) {
 }
 
 // Start the rendering process
-raml2md.render(input, raml2md.getDefaultConfig(program.template)).then(function(result) {
+raml2md.render(input, raml2md.getDefaultConfig(program.template, program.templatesPath)).then(function(result) {
   if (program.output) {
     fs.writeFileSync(program.output, result);
   } else {
