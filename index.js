@@ -2,13 +2,12 @@
 
 'use strict';
 
-var path = require('path');
 var raml2obj = require('raml2obj');
 var pjson = require('./package.json');
 var nunjucks = require('nunjucks');
 var Q = require('q');
 
-exports = module.exports = {
+module.exports = {
   getDefaultConfig: getDefaultConfig,
   render: render
 };
