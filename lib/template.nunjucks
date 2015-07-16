@@ -12,6 +12,6 @@
 ## {% if resource.displayName %}{{ resource.displayName }}{% else %}{{ resource.relativeUri }}{% endif %}
 {{ resource.description }}
 
-{% include "resource.nunjucks" %}
+{% include "./resource.nunjucks" %}
 
 {% endfor %}

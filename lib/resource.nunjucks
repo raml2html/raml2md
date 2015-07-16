@@ -7,5 +7,5 @@
 {% endif %}
 
 {% for resource in resource.resources %}
-{% include "resource.nunjucks" %}
+{% include "./resource.nunjucks" %}
 {% endfor %}

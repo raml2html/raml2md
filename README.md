@@ -19,7 +19,7 @@ npm i -g raml2md
 ```
 raml2md example.raml > example.md
 raml2md -i example.raml -o example.md
-raml2md -t custom-template.nunjucks -i example.raml -o example.md
+raml2md -t examples/custom-template-test/template.nunjucks -i examples/example.raml -o example.md
 ```
 
 ### As a library
@@ -41,16 +41,23 @@ raml2md.render(source, config).then(function(result) {
 #### Using your own Nunjucks templates
 ```
 var raml2md = require('raml2md');
+var config = raml2md.getDefaultConfig('my-custom-template.nunjucks', __dirname);
+raml2md.render(source, config).then(...);
+```
 
-// source can either be a filename, file contents (string) or parsed RAML object.
-// config should be an object with at least a `template` property which is a url (relative from the working directory) to your main template,
-// you can also include a processOutput function.
-// Returns a promise.
-raml2md.render(source, config).then(function(result) {
-  // Save the result to a file or do something else with the result
-}, function(error) {
-  // Output error
-});
+#### Custom pre-processing
+```
+var raml2md = require('raml2md');
+var config = raml2md.getDefaultConfig();
+
+config.processOutput = function(data) {
+  // Do whatever you want here and return the modified data. 
+  // The default implementation:
+  return data.replace(/\n{3,}/g, '\n\n');
+};
+
+raml2md.render(source, config).then(...);
+
 ```
 
 If you want to use a different template language, you're better off directly using [raml2obj](https://github.com/kevinrenskers/raml2obj).
@@ -67,11 +74,6 @@ raml2md is an open source project and your contribution is very much appreciated
 
 A big thank you goes out to everyone who helped with the project, the [contributors](https://github.com/kevinrenskers/raml2md/graphs/contributors)
 and everyone who took the time to report issues and give feedback.
-
-
-## To do
-This project is in an early stage. The generated Markdown is missing a lot of details but should be very usable
-for README's, for example.
 
 
 ## License

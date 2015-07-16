@@ -23,13 +23,13 @@ function render(source, config) {
   config = config || {};
   config.raml2MdVersion = pjson.version;
 
-  nunjucks.configure(config.templatesPath, {watch: false});
+  var env = nunjucks.configure(config.templatesPath, {watch: false});
 
   return raml2obj.parse(source).then(function(ramlObj) {
     ramlObj.config = config;
 
     return Q.fcall(function() {
-      var result = nunjucks.render(config.template, ramlObj);
+      var result = env.render(config.template, ramlObj);
       if (config.processOutput) {
         return config.processOutput(result);
       }
@@ -41,9 +41,11 @@ function render(source, config) {
 
 function getDefaultConfig(mainTemplate, templatesPath) {
   if (!mainTemplate) {
-    // When using the default templates, use raml2md's lib folder as the templates path
-    mainTemplate = 'template.nunjucks';
-    templatesPath = path.join(__dirname, 'lib');
+    mainTemplate = './lib/template.nunjucks';
+
+    // When using the default template, make sure that Nunjucks isn't
+    // using the working directory since that might be anything
+    templatesPath = __dirname;
   }
 
   return {
