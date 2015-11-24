@@ -7,7 +7,7 @@
     "email": "info@mixedcase.nl"
   },
   "bugs": {
-    "url": "https://github.com/kevinrenskers/raml2md/issues"
+    "url": "https://github.com/raml2html/raml2md/issues"
   },
   "dependencies": {
     "commander": "2.8.x",
@@ -18,7 +18,7 @@
   "devDependencies": {
     "eslint": "0.24.x"
   },
-  "homepage": "https://github.com/kevinrenskers/raml2md",
+  "homepage": "https://github.com/raml2html/raml2md",
   "keywords": [
     "RAML"
   ],
@@ -26,7 +26,7 @@
   "main": "index.js",
   "repository": {
     "type": "git",
-    "url": "git://github.com/kevinrenskers/raml2md.git"
+    "url": "git://github.com/raml2html/raml2md.git"
   },
   "preferGlobal": "true",
   "scripts": {

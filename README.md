@@ -4,7 +4,7 @@
 [![js-standard-style](https://img.shields.io/badge/code%20style-airbnb-blue.svg?style=flat)](https://github.com/airbnb/javascript)
 
 A simple RAML to Markdown documentation generator, written for Node.js.
-Check [raml2html](https://github.com/kevinrenskers/raml2html) for a RAML to HTML generator.
+Check [raml2html](https://github.com/raml2html/raml2html) for a RAML to HTML generator.
 
 
 ## Install
@@ -72,7 +72,7 @@ raml2md is an open source project and your contribution is very much appreciated
 3. Add an example of the new feature to example.raml (if applicable)
 4. Send a pull request (with the develop branch as the target).
 
-A big thank you goes out to everyone who helped with the project, the [contributors](https://github.com/kevinrenskers/raml2md/graphs/contributors)
+A big thank you goes out to everyone who helped with the project, the [contributors](https://github.com/raml2html/raml2md/graphs/contributors)
 and everyone who took the time to report issues and give feedback.
 
 
