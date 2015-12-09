@@ -1,3 +1,8 @@
+2.4.0 - December 9, 2015
+- Update third party dependencies
+- Use AirBnb ESLint package
+- Fixed linter errors
+
 2.3.0 - July 16, 2015
 - Update third party dependencies
 - Nunjucks 1.3.0 makes working with relative template includes a lot easier, use like this:

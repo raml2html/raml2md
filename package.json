@@ -10,13 +10,14 @@
     "url": "https://github.com/raml2html/raml2md/issues"
   },
   "dependencies": {
-    "commander": "2.8.x",
+    "commander": "2.9.x",
     "nunjucks": "2.2.x",
     "raml2obj": "2.2.x",
     "q": "1.4.x"
   },
   "devDependencies": {
-    "eslint": "0.24.x"
+    "eslint": "1.10.x",
+    "eslint-config-airbnb": "^2.0.0"
   },
   "homepage": "https://github.com/raml2html/raml2md",
   "keywords": [
@@ -30,7 +31,7 @@
   },
   "preferGlobal": "true",
   "scripts": {
-    "lint": "eslint ./"
+    "lint": "eslint index.js"
   },
   "bin": {
     "raml2md": "./bin/raml2md"
