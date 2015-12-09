@@ -22,7 +22,7 @@ function render(source, config) {
   config = config || {};
   config.raml2MdVersion = pjson.version;
 
-  var env = nunjucks.configure(config.templatesPath, {watch: false});
+  var env = nunjucks.configure(config.templatesPath, {autoescape: false});
 
   return raml2obj.parse(source).then(function(ramlObj) {
     ramlObj.config = config;
