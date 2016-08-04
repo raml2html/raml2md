@@ -1,3 +1,9 @@
+3.0.0 - August 4, 2016
+- Updated ESLint to 3.2.x
+- Updated nunjucks to 2.4.x
+- Updated code to ES6
+- Breaking change: Node 4 is now required
+
 2.4.0 - December 9, 2015
 - Update third party dependencies
 - Use AirBnb ESLint package
