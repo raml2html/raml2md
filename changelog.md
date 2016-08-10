@@ -1,3 +1,6 @@
+3.0.1 - August 10, 2016
+- Updated raml2obj
+
 3.0.0 - August 4, 2016
 - Updated ESLint to 3.2.x
 - Updated nunjucks to 2.4.x
