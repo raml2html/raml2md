@@ -25,7 +25,7 @@ raml2md -t examples/custom-template-test/template.nunjucks -i examples/example.r
 ### As a library
 
 #### Using the default templates
-```
+```js
 var raml2md = require('raml2md');
 var config = raml2md.getDefaultConfig();
 
@@ -39,14 +39,14 @@ raml2md.render(source, config).then(function(result) {
 ```
 
 #### Using your own Nunjucks templates
-```
+```js
 var raml2md = require('raml2md');
 var config = raml2md.getDefaultConfig('my-custom-template.nunjucks', __dirname);
 raml2md.render(source, config).then(...);
 ```
 
 #### Custom pre-processing
-```
+```js
 var raml2md = require('raml2md');
 var config = raml2md.getDefaultConfig();
 
