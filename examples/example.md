@@ -1,5 +1,5 @@
-# Example API documentation version 1
-http://example.com/1
+# Example RAML 1.0 API documentation version 1
+http://example.com/{version}
 
 ### Welcome
 Welcome to the Example Documentation. The Example API allows you
@@ -22,9 +22,17 @@ raml2html.parseWithConfig(source, config, onSuccess, onError);
 ### Chapter two
 More content here. Including **bold** text!
 
+Small table:
+
+| A | B | C |
+|---|---|---|
+| 1 | 2 | 3 |
+
+Done
+
 ---
 
-## ACCOUNTS
+## ACCOUNT
 This is the top level description for /account.
 * One
 * Two
@@ -59,6 +67,20 @@ Paragraph two
 
 * **get**: Gets the sessions
 * **delete**: Deletes the session, logging out the user
+
+### /account/admin
+
+* **post**: Creates a new administrator account.
+
+### /account/user
+
+* **post**: Test for multiple inheritence.
+
+## ACCOUNTS
+
+### /accounts
+
+* **post**: Creates multiple accounts.
 
 ## Forecasts
 The very top resource - displays OK
@@ -106,6 +128,10 @@ This is the top level description for /conversations.
 * **get**: Get the details of a user including a list of groups he belongs to
 * **put**: Update a user
 * **delete**: Deletes a user
+
+### /users/name_{userName}_{account}
+
+* **get**: Get all the users with a specific name
 
 ## /groups
 

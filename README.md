@@ -63,6 +63,10 @@ raml2md.render(source, config).then(...);
 If you want to use a different template language, you're better off directly using [raml2obj](https://github.com/kevinrenskers/raml2obj).
 
 
+## RAML version support
+raml2md 4 and higher only support RAML 1.0 files. Please stick with raml2md 3.x for RAML 0.8 support.
+
+
 ## Contribute
 raml2md is an open source project and your contribution is very much appreciated.
 

@@ -33,10 +33,11 @@ raml2md.render(input, raml2md.getDefaultConfig(program.template)).then(function(
     fs.writeFileSync(program.output, result);
   } else {
     // Simply output to console
-    process.stdout.write(result);
-    process.exit(0);
+    process.stdout.write(result, () => {
+      process.exit(0);
+  });
   }
 }, function(error) {
-  console.log('Error parsing: ' + error);
+  console.error(error);
   process.exit(1);
 });

@@ -1,7 +1,7 @@
 {
   "name": "raml2md",
   "description": "RAML to Markdown documentation generator",
-  "version": "3.0.1",
+  "version": "4.0.0-beta1",
   "author": {
     "name": "Kevin Renskers",
     "email": "info@mixedcase.nl"
@@ -11,12 +11,12 @@
   },
   "dependencies": {
     "commander": "2.9.x",
-    "nunjucks": "2.4.x",
-    "raml2obj": "3.0.0"
+    "nunjucks": "2.5.x",
+    "raml2obj": "4.0.0-beta7"
   },
   "devDependencies": {
-    "eslint": "3.2.x",
-    "eslint-config-loopwerk": "4.1.x"
+    "eslint": "3.7.x",
+    "eslint-config-loopwerk": "5.1.x"
   },
   "homepage": "https://github.com/raml2html/raml2md",
   "keywords": [
@@ -28,14 +28,19 @@
     "type": "git",
     "url": "git://github.com/raml2html/raml2md.git"
   },
-  "preferGlobal": "true",
+  "preferGlobal": true,
   "scripts": {
-    "lint": "eslint index.js",
-    "lintfix": "eslint index.js --fix"
+    "lint": "eslint .",
+    "lintfix": "eslint . --fix"
   },
   "bin": {
     "raml2md": "./bin/raml2md"
   },
+  "files": [
+    "index.js",
+    "bin/raml2md",
+    "lib"
+  ],
   "engines": {
     "node": ">=4"
   }
