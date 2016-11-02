@@ -1,3 +1,6 @@
+4.0.0-beta2 - November 2, 2016
+- Updated raml2obj to 4.0.0-beta13
+
 4.0.0-beta1 - October 14, 2016
 - Now supporting RAML 1.0 files via raml2obj 4.0.0-beta7
 - Updated example RAML file

@@ -1,7 +1,7 @@
 {
   "name": "raml2md",
   "description": "RAML to Markdown documentation generator",
-  "version": "4.0.0-beta1",
+  "version": "4.0.0-beta2",
   "author": {
     "name": "Kevin Renskers",
     "email": "info@mixedcase.nl"
@@ -12,10 +12,10 @@
   "dependencies": {
     "commander": "2.9.x",
     "nunjucks": "2.5.x",
-    "raml2obj": "4.0.0-beta7"
+    "raml2obj": "4.0.0-beta13"
   },
   "devDependencies": {
-    "eslint": "3.7.x",
+    "eslint": "3.9.x",
     "eslint-config-loopwerk": "5.1.x"
   },
   "homepage": "https://github.com/raml2html/raml2md",
