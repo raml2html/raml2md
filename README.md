@@ -6,6 +6,9 @@
 A simple RAML to Markdown documentation generator, written for Node.js.
 Check [raml2html](https://github.com/raml2html/raml2html) for a RAML to HTML generator.
 
+## RAML version support
+raml2md 4 and higher only support RAML 1.0 files. Please stick with raml2md 3.x for RAML 0.8 support.
+
 
 ## Install
 ```

@@ -1,3 +1,6 @@
+4.0.0 - December 1, 2016
+- Release 4.0.0 final with RAML 1.0 support
+
 4.0.0-beta2 - November 2, 2016
 - Updated raml2obj to 4.0.0-beta13
 
