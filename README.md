@@ -1,3 +1,6 @@
+# DEPRECATED
+Please use raml2html 5.x with the raml2html-markdown-theme instead.
+
 # RAML to Markdown
 
 [![NPM version](http://img.shields.io/npm/v/raml2md.svg)](https://www.npmjs.org/package/raml2md)
